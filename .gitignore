@@ -1,0 +1,9 @@
+pkg
+bin
+*/pkg
+*.exe
+*.log
+*/src/src
+*.data
+*/bin
+*/githup.com

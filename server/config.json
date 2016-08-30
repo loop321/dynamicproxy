@@ -1,0 +1,9 @@
+{
+	"version":"0.1",
+	"managerPort":"8086",
+	"connPort":"11179",
+	"nginxDir":"D:/soft/nginx-1.10.1",
+	"userSetting":{
+		"ren,ren_ren":[]	
+	}
+}
