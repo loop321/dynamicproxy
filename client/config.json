@@ -1,7 +1,7 @@
 {
-	"addr":"whd.ssgg.ga:11179",
-	"user":"ren",
-	"pwd":"ren_ren",
-	"inner":"jytest.qmx.top",
-	"outer":"rz.ssgg.ga"
+	"addr":"127.0.0.1:11179",
+	"user":"loop321",
+	"pwd":"pwdpwd",
+	"inner":"127.0.0.1:8080",
+	"outer":"www.test.cn"
 }
