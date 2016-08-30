@@ -50,6 +50,7 @@ func (s *SerProxy) GC() {
 }
 
 func (s *SerProxy) GetClient() *TCPConn {
+	defer util.Catch()
 	var responesConn *TCPConn
 	select {
 	case responesConn = <-s.ClientSess:
@@ -78,6 +79,7 @@ func (s *SerProxy) GetClient() *TCPConn {
 
 //放回连接
 func (s *SerProxy) RecycleClient(t *TCPConn) {
+	defer util.Catch()
 	_, err := t.Conn.Write(util.Enpacket(util.EVENT_PING, map[string]interface{}{
 		"s_id": s.ID,
 	}, nil))
@@ -195,6 +197,7 @@ type TCPConn struct {
 }
 
 func (t *TCPConn) TransportCon(httpcon net.Conn) {
+	defer util.Catch()
 	httpcon.SetDeadline(time.Now().Add(20 * time.Second))
 	defer func() {
 		go t.Psp.RecycleClient(t)
